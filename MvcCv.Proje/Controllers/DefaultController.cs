@@ -7,8 +7,10 @@ using MvcCv.Proje.Models.Entity;
 
 namespace MvcCv.Proje.Controllers
 {
+    [AllowAnonymous]
     public class DefaultController : Controller
     {
+
         // GET: Default
         DbCVEntities db = new DbCVEntities();
         public ActionResult Index()
@@ -48,23 +50,21 @@ namespace MvcCv.Proje.Controllers
             var sertifikalar = db.TblSertifikalar.ToList();
             return PartialView(sertifikalar);
         }
-        [HttpGet]
-        public PartialViewResult iletisim()
+        //[HttpGet]
+        //public PartialViewResult iletisim()   
+        //{
 
-         
-        {
-
-            return PartialView();
-        }
-        [HttpPost]
-        public PartialViewResult iletisim(Tbliletişim t)
+        //    return PartialView();
+        //}
+        //[HttpPost]
+        //public PartialViewResult iletisim(Tbliletisim t)
 
 
-        {
-            t.Tarih=DateTime.Parse(DateTime.Now.ToShortDateString());
-            db.Tbliletişim.Add(t);
-            db.SaveChanges();
-            return PartialView();
-        }
+        //{
+        //    t.Tarih=DateTime.Parse(DateTime.Now.ToShortDateString());
+        //    db.Tbliletisim.Add(t);
+        //    db.SaveChanges();
+        //    return PartialView();
+        //}
     }
 }

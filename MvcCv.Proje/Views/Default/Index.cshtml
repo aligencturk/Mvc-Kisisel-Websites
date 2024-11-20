@@ -29,7 +29,11 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
             <span class="d-block d-lg-none">Clarence Taylor</span>
-            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="/startbootstrap-resume-gh-pages/assets/img/profile.jpg" alt="" /></span>
+            @foreach (var item in Model)
+            {
+            <span class="d-none d-lg-block">
+            <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="@item.Resim" alt="" /></span>
+            }
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -65,7 +69,7 @@
         @foreach (var x in Model)
         {
             <section class="resume-section" id="about">
-                <div class="resume-section-content">
+                <div>
                     <h1 class="mb-0">
                         @x.Ad
                         <span class="text-primary">@x.Soyad</span>
@@ -77,9 +81,10 @@
                     <p class="lead mb-5">@x.Aciklama</p>
                     <div class="social-icons">
                         <a class="social-icon" href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="social-icon" href="#"><i class="fab fa-github"></i></a>
-                        <a class="social-icon" href="#"><i class="fab fa-twitter"></i></a>
-                        <a class="social-icon" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="social-icon" href="https://github.com/aligencturk" target="_blank"><i class="fab fa-github"></i></a>
+                        <a class="social-icon" href="https://x.com/alililililli" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a class="social-icon" href="https://www.facebook.com/ali.gnctrk17/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a class="social-icon" href="https://www.instagram.com/ali.gnctrk17/" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </section>
@@ -112,10 +117,7 @@
             @Html.Action("Sertifikalarım")
         </section>
         <hr class="m-0" />
-        <!-- Contact-->
-        <section class="resume-section" id="contact">
-            @Html.Action("iletisim")
-        </section>
+
     </div>
     <!-- Bootstrap core JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

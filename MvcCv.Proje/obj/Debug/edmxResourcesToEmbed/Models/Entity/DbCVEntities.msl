@@ -2,7 +2,7 @@
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="DbCVModelStoreContainer" CdmEntityContainer="DbCVEntities">
     <EntitySetMapping Name="TblAdmin">
-      <EntityTypeMapping TypeName="DbCVModel.TblAdmin">
+      <EntityTypeMapping TypeName="IsTypeOf(DbCVModel.TblAdmin)">
         <MappingFragment StoreEntitySet="TblAdmin">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
@@ -11,7 +11,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TblDeneyimlerim">
-      <EntityTypeMapping TypeName="DbCVModel.TblDeneyimlerim">
+      <EntityTypeMapping TypeName="IsTypeOf(DbCVModel.TblDeneyimlerim)">
         <MappingFragment StoreEntitySet="TblDeneyimlerim">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Baslik" ColumnName="Baslik" />
@@ -22,7 +22,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TblEgitimlerim">
-      <EntityTypeMapping TypeName="DbCVModel.TblEgitimlerim">
+      <EntityTypeMapping TypeName="IsTypeOf(DbCVModel.TblEgitimlerim)">
         <MappingFragment StoreEntitySet="TblEgitimlerim">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Baslik" ColumnName="Baslik" />
@@ -34,7 +34,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TblHakkimda">
-      <EntityTypeMapping TypeName="DbCVModel.TblHakkimda">
+      <EntityTypeMapping TypeName="IsTypeOf(DbCVModel.TblHakkimda)">
         <MappingFragment StoreEntitySet="TblHakkimda">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Ad" ColumnName="Ad" />
@@ -48,7 +48,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TblHobilerim">
-      <EntityTypeMapping TypeName="DbCVModel.TblHobilerim">
+      <EntityTypeMapping TypeName="IsTypeOf(DbCVModel.TblHobilerim)">
         <MappingFragment StoreEntitySet="TblHobilerim">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Aciklama1" ColumnName="Aciklama1" />
@@ -57,30 +57,28 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TblSertifikalar">
-      <EntityTypeMapping TypeName="DbCVModel.TblSertifikalar">
+      <EntityTypeMapping TypeName="IsTypeOf(DbCVModel.TblSertifikalar)">
         <MappingFragment StoreEntitySet="TblSertifikalar">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TblYeteneklerim">
-      <EntityTypeMapping TypeName="DbCVModel.TblYeteneklerim">
+      <EntityTypeMapping TypeName="IsTypeOf(DbCVModel.TblYeteneklerim)">
         <MappingFragment StoreEntitySet="TblYeteneklerim">
-          <ScalarProperty Name="Oran" ColumnName="Oran" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Yetenek" ColumnName="Yetenek" />
+          <ScalarProperty Name="Oran" ColumnName="Oran" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Tblİletişim1Set">
-      <EntityTypeMapping TypeName="DbCVModel.Tblİletişim1">
-        <MappingFragment StoreEntitySet="Tblİletişim">
-          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
-          <ScalarProperty Name="Mesaj" ColumnName="Mesaj" />
-          <ScalarProperty Name="Konu" ColumnName="Konu" />
-          <ScalarProperty Name="Mail" ColumnName="Mail" />
-          <ScalarProperty Name="Adsoyad" ColumnName="Adsoyad" />
+    <EntitySetMapping Name="TblSosyalMedya">
+      <EntityTypeMapping TypeName="DbCVModel.TblSosyalMedya">
+        <MappingFragment StoreEntitySet="TblSosyalMedya">
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
           <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
