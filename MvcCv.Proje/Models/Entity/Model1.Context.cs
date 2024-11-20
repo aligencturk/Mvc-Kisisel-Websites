@@ -30,7 +30,7 @@ namespace MvcCv.Proje.Models.Entity
         public virtual DbSet<TblEgitimlerim> TblEgitimlerim { get; set; }
         public virtual DbSet<TblHakkimda> TblHakkimda { get; set; }
         public virtual DbSet<TblHobilerim> TblHobilerim { get; set; }
-        public virtual DbSet<Tbliletişim> Tbliletişim { get; set; }
+      
         public virtual DbSet<TblSertifikalar> TblSertifikalar { get; set; }
         public virtual DbSet<TblYeteneklerim> TblYeteneklerim { get; set; }
     }

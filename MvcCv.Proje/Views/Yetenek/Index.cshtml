@@ -25,7 +25,11 @@
                             <!-- /.card-header -->
 
                             <div class="card-body">
+
                                 <table class="table table-bordered">
+                                    <a href="/Yetenek/YeniYetenek" class="btn btn-info"> Yeni Yetenek Ekle</a>
+                                    <br />
+                                    <br />
                                     <thead>
                                         <tr>
                                             <th style="width: 10px">#</th>
@@ -33,17 +37,20 @@
                                             <th>Derece</th>
 
                                             <th style="width: 40px">Oran</th>
+                                            <th>Düzenle</th>
+                                            <th>Sil</th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach (var item in Model)
                                         {
-                                            if(item.Oran >= 0 && item.Oran <= 50)
+                                            if (item.Oran >= 0 && item.Oran <= 50)
                                             {
                                                 renk = " progress-bar bg-danger";
                                                 labelrenk = "badge bg-danger";
                                             }
-                                            if(item.Oran>=51 && item.Oran <=70)
+                                            if (item.Oran >= 51 && item.Oran <= 70)
                                             {
                                                 renk = " progress-bar bg-warning";
                                                 labelrenk = "badge bg-warning";
@@ -68,8 +75,23 @@
                                                     </div>
                                                 </td>
                                                 <td><span class="@labelrenk">%@item.Oran</span></td>
+
+                                                <td>
+                                                    <a class="btn btn-info btn-sm" href="/Yetenek/YetenekDuzenle/@item.ID">
+                                                        <i class="fas fa-pencil-alt">
+                                                        </i>
+                                                        Düzenle
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-danger btn-sm" href="/Yetenek/YetenekSil/@item.ID">
+                                                        <i class="fas fa-trash">
+                                                        </i>
+                                                        Sil
+                                                    </a>
+                                                </td>
                                             </tr>
-                                         }
+                                        }
 
                                     </tbody>
                                 </table>
